@@ -211,7 +211,7 @@ public class MainActivity extends Activity {
 		case 4: //FUNCION SENO
 			try
 			{
-				_valor= Math.sin(_valor);
+				_valor = Math.sin(Double.parseDouble(_edit.getText().toString()));
 				_edit.setText(String.valueOf(_valor));
 			}
 			catch (Exception e)
@@ -223,7 +223,7 @@ public class MainActivity extends Activity {
 		case 5: //FUNCION COSENO
 			try
 			{
-				_valor= Math.cos(_valor);
+				_valor = Math.cos(Double.parseDouble(_edit.getText().toString()));
 				_edit.setText(String.valueOf(_valor));
 			}
 			catch (Exception e)
@@ -239,13 +239,13 @@ public class MainActivity extends Activity {
 			}
 			catch (Exception e)
 			{
-				_edit.setTextColor(Color.RED);
-				_edit.setText("Error");
+				_valor = Math.tan(Double.parseDouble(_edit.getText().toString()));
+				_edit.setText(String.valueOf(_valor));
 			}
-		case 7: //FUNCION RAIZ
+		case 7: //FUNCION LOGARITMO
 			try
 			{
-				_valor= Math.sqrt(_valor);
+				_valor = Math.log(Double.parseDouble(_edit.getText().toString()));
 				_edit.setText(String.valueOf(_valor));
 			}
 			catch (Exception e)
